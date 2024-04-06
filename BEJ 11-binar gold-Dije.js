@@ -19,4 +19,3 @@ john.name = "John";
 john.sayHello("John");
 
 console.info(dije);
-console.info(john);
