@@ -1,0 +1,13 @@
+function Toyota (model,fitur) {
+    this.model = model;
+    this.introduce = function () {
+        console.log(`Mobil tipe ${this.model} memiiki fitur ABS (Anti Lock Braking System)`);
+
+    }
+
+}
+
+var yaris = new Toyota("Yaris");
+var agya = new Toyota("Agya");
+yaris.introduce();
+agya.introduce(); 
