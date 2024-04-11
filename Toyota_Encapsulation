@@ -1,0 +1,22 @@
+class Toyota {
+    constructor (model) {
+        this.model = model;
+
+     }
+}
+    
+class CityCar extends Toyota {
+    constructor (model,tahun,fitur) {
+        super(model);
+        this.tahun = tahun;
+        this.fitur = fitur;
+     }
+
+     Introduce() {
+        console.info(`Mobil toyota tipe city car model ${this.model} , tahun ${this.year} memiliki fitur terbaru ${this.fitur}`);
+      }
+
+}
+
+const yaris = new CityCar ("Yaris Bakpao",2013,"Anti Lock Braking System");  
+console.log(yaris);
