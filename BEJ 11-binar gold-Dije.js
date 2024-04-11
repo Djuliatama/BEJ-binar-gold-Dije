@@ -1,21 +1,28 @@
-class Employee {
-    sayHello(name) {
-        console.info(`Hello ${name} , my name is employee ${this.name}`);
+// inheritance 
+class Toyota {
+    constructor (model) {
+        this.model = model;
+
      }
+     
+     features() {
+        return "Abs";
+     }
+    
+
 }
     
-class Manager extends Employee {
-    //sayHello(name) {
-    //    console.info(`Hello ${name} , my name is manager ${this.name}`);
-    // }
+class CityCar extends Toyota {
+    constructor (model,tahun) {
+        super(model);
+        this.tahun = tahun;
+     }
+
+     show() {
+        return this.features() + ` adalah fungsi baru mobil ${this.model} di tahun ${this.tahun}`;
+     }
 }
 
-const dije = new Employee();
-dije.name = "Dije";
-dije.sayHello("John");
+const yaris = new CityCar ("Yaris Bakpao",2013);
+console.log(yaris.show());
 
-const john = new Manager();
-john.name = "John";
-john.sayHello("John");
-
-console.info(dije);
