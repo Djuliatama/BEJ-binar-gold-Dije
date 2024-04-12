@@ -1,0 +1,17 @@
+class Toyota {
+    constructor(model,tahun) {
+        if(this.constructor === Toyota) {
+            throw new Error ("Toyota class couldn't appear");
+        }
+     this.model = model; 
+     this.tahun = tahun;
+    }
+
+    feature() {
+        throw new Error("Can't call the feature");
+    }
+
+}
+
+let yaris = new Toyota ("Yaris", 2013);
+console.log(yaris);
