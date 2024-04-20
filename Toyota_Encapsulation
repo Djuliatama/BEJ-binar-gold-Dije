@@ -1,22 +1,24 @@
-class Toyota {
-    constructor (model) {
-        this.model = model;
-
-     }
-}
-    
-class CityCar extends Toyota {
-    constructor (model,tahun,fitur) {
-        super(model);
+class Citycar {
+    constructor (model, tahun, fitur) {
+        this.model = model; //model ini jd private variable kalau ditambah _
         this.tahun = tahun;
         this.fitur = fitur;
      }
 
-     Introduce() {
-        console.info(`Mobil toyota tipe city car model ${this.model} , tahun ${this.year} memiliki fitur terbaru ${this.fitur}`);
-      }
+     updateModel(inputModel) {
+        this.model = inputModel;
+     }
+
+     #Introduce = () => {
+        console.log (`Mobil toyota tipe city car model ${this._model}`);
+        return "";
+     }
+
+     talk() {
+        console.log(this.#Introduce());
+     }
 
 }
-
-const yaris = new CityCar ("Yaris Bakpao",2013,"Anti Lock Braking System");  
-console.log(yaris);
+    
+let Yaris = new CityCar ("Yaris Bakpao",2013,"Anti Lock Braking System");  
+Yaris.talk()
